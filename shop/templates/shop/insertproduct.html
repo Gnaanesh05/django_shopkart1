@@ -1,0 +1,65 @@
+
+{% block title %}
+AddProduct | Online Shopping
+{% endblock title %}
+{% load static %}
+
+<div class="content">
+    <h2> welcome to insert Product</h2>
+    <div class="row">
+        <div class="col-md-8 p-3 mb-2 bg-secondary text-white">
+            <form action="insert" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="categoryname" class="form-label">Category:</label>
+                    <input type="text" class="form-control" name="categoryname">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="vendor" class="form-label">vendor:</label>
+                    <input type="text" class="form-control"  name="vendor">
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Product Image:</label>
+                    <input type="file" class="form-control" id="image" name="image">
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity:</label>
+                    <input type="text" class="form-control" name="quantity">
+                </div>
+                <div class="mb-3">
+                    <label for="original" class="form-label">Original:</label>
+                    <input type="text" class="form-control"  name="original">
+                </div>
+                <div class="mb-3">
+                    <label for="selling" class="form-label">Selling Price :</label>
+                    <input type="text" class="form-control"  name="selling">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <input type="text" class="form-control"  name="description">
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">status:</label>
+                    <input type="BooleanField" class="form-control"  name="status">
+                </div>
+                <div class="mb-3">
+                    <label for="trending" class="form-label">Trending:</label>
+                    <input type="BooleanField" class="form-control" id="status" name="trending">
+                </div>
+                <div class="mb-3">
+                    <label for="created" class="form-label">Created Time:</label>
+                    <input type="text" class="form-control" ame="created">
+                </div>
+                
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-outline-success">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
